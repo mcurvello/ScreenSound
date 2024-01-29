@@ -9,11 +9,13 @@ namespace ScreenSound.Banco
 
         public DbSet<Musica> Musicas { get; set; }
 
-        private string connectionString = "Server=localhost,1433;Initial Catalog=master;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;User=sa;Password=Password.1";
+        private string connectionString = "Server=localhost,1433;Initial Catalog=ScreenSound;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;User=sa;Password=Password.1";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder
+                .UseSqlServer(connectionString)
+                .UseLazyLoadingProxies();
         }
 
     }
