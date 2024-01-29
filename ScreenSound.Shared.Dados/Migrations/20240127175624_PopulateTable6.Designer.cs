@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ScreenSound.Banco;
+using ScreenSound.Shared.Dados;
 
 #nullable disable
 
 namespace ScreenSound.Migrations
 {
     [DbContext(typeof(ScreenSoundContext))]
-    [Migration("20240127175936_UpdateTable")]
-    partial class UpdateTable
+    [Migration("20240127175624_PopulateTable6")]
+    partial class PopulateTable6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

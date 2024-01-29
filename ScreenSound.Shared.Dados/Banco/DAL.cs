@@ -1,8 +1,8 @@
-﻿namespace ScreenSound.Banco
+﻿namespace ScreenSound.Shared.Dados
 {
-    internal class DAL<T> where T : class
+    public class DAL<T> where T : class
 	{
-        protected readonly ScreenSoundContext context;
+        private readonly ScreenSoundContext context;
 
         public DAL(ScreenSoundContext context)
         {
@@ -35,6 +35,11 @@
         public T? RecuperarPor(Func<T, bool> condicao)
         {
             return context.Set<T>().FirstOrDefault(condicao);
+        }
+
+        public IEnumerable<T> ListarPor(Func<T, bool> condicao)
+        {
+            return context.Set<T>().Where(condicao);
         }
     }
 }

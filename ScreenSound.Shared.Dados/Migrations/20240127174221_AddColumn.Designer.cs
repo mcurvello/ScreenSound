@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ScreenSound.Banco;
+using ScreenSound.Shared.Dados;
 
 #nullable disable
 
 namespace ScreenSound.Migrations
 {
     [DbContext(typeof(ScreenSoundContext))]
-    [Migration("20240127175241_Relation")]
-    partial class Relation
+    [Migration("20240127174221_AddColumn")]
+    partial class AddColumn
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,32 +61,13 @@ namespace ScreenSound.Migrations
                     b.Property<int?>("AnoLancamento")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ArtistaId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArtistaId");
-
                     b.ToTable("Musicas");
-                });
-
-            modelBuilder.Entity("ScreenSound.Modelos.Musica", b =>
-                {
-                    b.HasOne("ScreenSound.Modelos.Artista", "Artista")
-                        .WithMany("Musicas")
-                        .HasForeignKey("ArtistaId");
-
-                    b.Navigation("Artista");
-                });
-
-            modelBuilder.Entity("ScreenSound.Modelos.Artista", b =>
-                {
-                    b.Navigation("Musicas");
                 });
 #pragma warning restore 612, 618
         }

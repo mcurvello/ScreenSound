@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ScreenSound.Modelos;
+using ScreenSound.Shared.Modelos;
 
-namespace ScreenSound.Banco
+namespace ScreenSound.Shared.Dados
 {
-    internal class ScreenSoundContext : DbContext
+    public class ScreenSoundContext : DbContext
 	{
         public DbSet<Artista> Artistas { get; set; }
 
