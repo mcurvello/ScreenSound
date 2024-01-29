@@ -16,4 +16,10 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Endpoints\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Endpoints\" />
+  </ItemGroup>
 </Project>
