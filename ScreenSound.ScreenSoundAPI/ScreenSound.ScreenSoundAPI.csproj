@@ -18,9 +18,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Endpoints\" />
+    <None Remove="Requests\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Endpoints\" />
+    <Folder Include="Requests\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
