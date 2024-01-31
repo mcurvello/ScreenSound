@@ -1,4 +1,4 @@
-﻿namespace ScreenSound.Shared.Modelos; 
+﻿namespace ScreenSound.Shared.Modelos.Modelos; 
 
 public class Artista 
 {

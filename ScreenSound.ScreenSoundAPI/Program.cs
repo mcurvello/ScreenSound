@@ -1,8 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Mvc;
 using ScreenSound.ScreenSoundAPI.Endpoints;
 using ScreenSound.Shared.Dados;
-using ScreenSound.Shared.Modelos;
+using ScreenSound.Shared.Modelos.Modelos;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ScreenSoundContext>();
